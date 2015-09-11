@@ -29,7 +29,10 @@ set softtabstop=2
 " Auto-indentation.
 set autoindent
 filetype plugin indent on
+" NERDTree on startup.
 autocmd vimenter * NERDTree
+" Ignores node_modules directories, otherwise ctrlp will be polluted by files
+" we're not interested in.
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " Automatically reloads the .vimrc when it's changed.
