@@ -6,6 +6,7 @@ These are my personal dotfiles. Feel free to use them.
     ```bash
     # Say we want to use the Vim dotfile and we've
     # put the dotfiles in the ~/.dotfiles directory.
+    
     ln -s ~/.dotfiles/vimrc ~/.vimrc
     ```
 3. You are now using my terrible customizations. Is this what you wanted?
