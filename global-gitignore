@@ -1,0 +1,6 @@
+# Global .gitignore.
+# This can be used by typing:
+# git config --global core.excludesfile ~/.dotfiles/global-gitignore
+
+# Vim swap files
+.*.s??
