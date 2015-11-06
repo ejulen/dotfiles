@@ -22,6 +22,9 @@ set ignorecase
 set incsearch
 " Displays line numbers.
 set number
+" Makes backspace work normally. Otherwise it might not be able to backspace
+" over newlines and stuff, and that's just plain weird.
+set backspace=2
 " Use spaces instead of tabs.
 set expandtab
 set shiftwidth=2
