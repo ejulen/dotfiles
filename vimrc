@@ -14,6 +14,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'lambdatoast/elm.vim'
 call vundle#end()
 " Syntax highlighting.
 syntax on
