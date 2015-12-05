@@ -40,11 +40,8 @@ autocmd vimenter * NERDTree
 " we're not interested in.
 let g:ctrlp_custom_ignore = 'node_modules'
 
-" Without this webpack --watch and others do not work on some versions of
-" Windows, oddly enough.
-if has("win32") || has("win16")
-  set backupcopy=yes
-endif
+" Without this webpack --watch and others does not work on certain platforms.
+set backupcopy=yes
 
 " Automatically reloads the .vimrc when it's changed.
 augroup myvimrc
