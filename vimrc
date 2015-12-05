@@ -15,6 +15,8 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
+" Ctrl-y, to expand (don't forget the comma!)
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 " Syntax highlighting.
 syntax on
