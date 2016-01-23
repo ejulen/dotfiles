@@ -12,7 +12,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
 " Ctrl-y, to expand (don't forget the comma!)
