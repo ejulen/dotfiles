@@ -6,14 +6,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'wavded/vim-stylus'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " Ctrl-y, to expand (don't forget the comma!)
 Plugin 'mattn/emmet-vim'
 call vundle#end()
