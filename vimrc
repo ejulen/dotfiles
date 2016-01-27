@@ -14,6 +14,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'posva/vim-vue'
 " Ctrl-y, to expand (don't forget the comma!)
 Plugin 'mattn/emmet-vim'
 call vundle#end()
