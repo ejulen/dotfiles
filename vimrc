@@ -54,3 +54,5 @@ augroup END
 
 " Re-indents the entire file.
 nnoremap ,r mzgg=G`z
+
+let g:syntastic_javascript_checkers = ['standard']
