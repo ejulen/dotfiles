@@ -16,6 +16,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'posva/vim-vue'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Ctrl-y, to expand (don't forget the comma!)
 Plugin 'mattn/emmet-vim'
 call vundle#end()
