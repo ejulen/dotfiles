@@ -4,6 +4,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -57,3 +58,5 @@ augroup END
 nnoremap ,r mzgg=G`z
 
 let g:syntastic_javascript_checkers = ['standard']
+
+colorscheme hybrid
