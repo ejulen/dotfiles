@@ -41,9 +41,9 @@ set autoindent
 filetype plugin indent on
 " NERDTree on startup.
 autocmd vimenter * NERDTree
-" Ignores node_modules directories, otherwise ctrlp will be polluted by files
+" Ignores node_modules and jspm_packages directories, otherwise ctrlp will be polluted by files
 " we're not interested in.
-let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|jspm_packages)'
 
 " Without this webpack --watch and others do not work on certain platforms.
 set backupcopy=yes
