@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "complete_strings": {},
+    "node": {},
+    "node_resolve": {},
+    "commonjs": {},
+    "modules": {},
+    "es_modules": {}
+  }
+}
