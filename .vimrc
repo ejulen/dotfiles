@@ -8,6 +8,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
 call vundle#end()
 filetype plugin indent on
 
