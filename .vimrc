@@ -42,6 +42,8 @@ set backupcopy=yes
 " Show matching brackets
 set showmatch
 
+set noswapfile
+
 autocmd vimenter * NERDTree
 " Focuses the main window instead of NERDTree
 autocmd vimenter * wincmd p
