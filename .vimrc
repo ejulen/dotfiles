@@ -34,6 +34,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules)'
 " Make search more bearable
 set ignorecase
 set incsearch
+set hlsearch
 
 syntax on
 
