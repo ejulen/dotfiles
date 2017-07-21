@@ -21,3 +21,7 @@ set shiftwidth=2
 set softtabstop=2
 " Auto-indentation.
 set autoindent
+
+" Exclude certain files and folders in CtrlP
+set wildignore+=**/node_modules
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)'
