@@ -82,10 +82,6 @@ let g:deoplete#sources#ternjs#docs = 1
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#case_insensitive = 1
 
-" Make Deoplete work with phpcd.vim
-let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-let g:deoplete#ignore_sources.php = ['omni']
-
 color candyman
 
 " Makes it easier to resize windows to just the right size.
