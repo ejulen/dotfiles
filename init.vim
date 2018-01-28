@@ -1,3 +1,6 @@
+" Requirements:
+" - Neovim for Python, install with pip3 install --user neovim
+" - Node
 set nocompatible
 
 call plug#begin('~/.local/share/nvim/plugged')
