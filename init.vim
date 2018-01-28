@@ -1,6 +1,7 @@
 " Requirements:
 " - Neovim for Python, install with pip3 install --user neovim
 " - Node
+" - ag, the Silver Searcher
 set nocompatible
 
 call plug#begin('~/.local/share/nvim/plugged')
