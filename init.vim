@@ -32,6 +32,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 call plug#end()
 
 filetype plugin indent on
@@ -48,7 +49,6 @@ set softtabstop=2
 " Auto-indentation.
 set autoindent
 set copyindent
-set smartindent
 
 " Make search more bearable
 set ignorecase
