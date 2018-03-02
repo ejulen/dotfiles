@@ -16,7 +16,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 " Remember to create a Tern config file as well.
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm i -g tern' }
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 " SetColors all, then F8 to toggle through available color schemes
 Plug 'felixhummel/setcolors.vim'
