@@ -34,6 +34,7 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'jwalton512/vim-blade'
 call plug#end()
 
 filetype plugin indent on
