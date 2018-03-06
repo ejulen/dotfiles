@@ -106,3 +106,5 @@ map <C-n> :NERDTreeToggle<CR>
 set cursorline
 set splitbelow
 set splitright
+
+autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css
