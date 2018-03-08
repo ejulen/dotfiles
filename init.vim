@@ -13,7 +13,14 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Python-related plugins
+" <leader>d = goto definition
+" <leader>g = goto assignment
+Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
 Plug 'zchee/deoplete-jedi'
+
 " Remember to create a Tern config file as well.
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm i -g tern' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -33,7 +40,6 @@ Plug 'tpope/vim-sleuth'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'jwalton512/vim-blade'
 call plug#end()
 
