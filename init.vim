@@ -113,5 +113,5 @@ set cursorline
 set splitbelow
 set splitright
 
-autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css
-autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript.css
+autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript
+autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
