@@ -38,7 +38,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'shawncplus/phpcomplete.vim'
-Plug 'nelsyeung/twig.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
@@ -115,3 +114,4 @@ set splitbelow
 set splitright
 
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript.css
+autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript.css
