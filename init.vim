@@ -41,6 +41,11 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
+Plug 'ludovicchabant/vim-gutentags'
+" Smarter context for PHP
+Plug 'shawncplus/phpcomplete.vim'
+" Linting for various languages
+Plug 'w0rp/ale'
 call plug#end()
 
 filetype plugin indent on
@@ -115,3 +120,7 @@ set splitright
 
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript
 autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
+
+let g:ale_linters = {
+\   'php': ['php'],
+\}
