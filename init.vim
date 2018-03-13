@@ -70,8 +70,9 @@ set hlsearch
 " Faster fuzzy searching, please
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-" And fast grepping, too. For example: :grep --php echo
-set grepprg=ag
+" Grep with Ggr, navigate quickfix window with :cc <number> or :cn or :cp
+command -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
+autocmd FileType qf setlocal norelativenumber
 
 syntax on
 
