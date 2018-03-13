@@ -1,7 +1,6 @@
 " Requirements:
 " - Neovim for Python, install with pip3 install --user neovim
 " - Node
-" - ag, the Silver Searcher
 set nocompatible
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -69,7 +68,7 @@ set incsearch
 set hlsearch
 
 " Faster fuzzy searching, please
-let g:ctrlp_user_command = 'ag %s -l --no-color --hidden -g ""'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " And fast grepping, too. For example: :grep --php echo
 set grepprg=ag
