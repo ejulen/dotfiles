@@ -122,7 +122,15 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript
 autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
 
 let g:ale_linters = {
-\   'php': ['php'],
+  \   'php': ['php'],
 \}
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+
+" Make gutentags ignore .gitignored files
+let g:gutentags_file_list_command = {
+ \ 'markers': {
+     \ '.git': 'git ls-files',
+     \ '.hg': 'hg files',
+     \ },
+\ }
