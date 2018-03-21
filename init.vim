@@ -12,19 +12,21 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Python-related plugins
-" <leader>d = goto definition
-" <leader>g = goto assignment
-Plug 'davidhalter/jedi-vim'
-Plug 'python-mode/python-mode', { 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
-Plug 'zchee/deoplete-jedi'
+Plug 'kchmck/vim-coffee-script'
+" For PHP
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
+Plug 'roxma/nvim-completion-manager'
 
 " Remember to create a Tern config file as well.
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm i -g tern' }
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+Plug 'davidhalter/jedi-vim'
+" Plug 'python-mode/python-mode', { 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
+
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'tpope/vim-commentary'
 " SetColors all, then F8 to toggle through available color schemes
 Plug 'felixhummel/setcolors.vim'
@@ -37,15 +39,12 @@ Plug 'tpope/vim-fugitive'
 " ds[ = remove []
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
-Plug 'shawncplus/phpcomplete.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
-Plug 'ludovicchabant/vim-gutentags'
-" Smarter context for PHP
-Plug 'shawncplus/phpcomplete.vim'
+" Plug 'shawncplus/phpcomplete.vim'
 " Linting for various languages
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', {'do': 'pip3 install --user autopep8 flake8'}
 call plug#end()
 
 filetype plugin indent on
@@ -122,9 +121,6 @@ set splitright
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript
 autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
 
-let g:ale_linters = {
-  \   'php': ['php'],
-\}
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 
@@ -135,3 +131,9 @@ let g:gutentags_file_list_command = {
      \ '.hg': 'hg files',
      \ },
 \ }
+
+
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_autoStart = 1
