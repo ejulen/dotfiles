@@ -38,7 +38,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
 " Plug 'shawncplus/phpcomplete.vim'
 " Linting for various languages
-Plug 'w0rp/ale', {'do': 'pip3 install --user autopep8 flake8'}
 call plug#end()
 
 filetype plugin indent on
@@ -103,9 +102,6 @@ set splitright
 
 autocmd BufRead,BufNewFile *.vue setlocal filetype=html.javascript
 autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
-
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
 
 " Required for operations modifying multiple buffers like rename.
 set hidden
