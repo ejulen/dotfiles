@@ -1,5 +1,8 @@
 " Requirements:
 " - Neovim for Python, install with pip3 install --user neovim
+" - pyls (pip3 install --user pythong-language-server)
+" - javascript-typescript-langserver (npm i -g
+"   javascript-typescript-langserver)
 " - Node
 set nocompatible
 
