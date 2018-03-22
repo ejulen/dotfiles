@@ -13,18 +13,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kchmck/vim-coffee-script'
-" For PHP
+Plug 'roxma/nvim-completion-manager'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-Plug 'roxma/nvim-completion-manager'
-
-" Remember to create a Tern config file as well.
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-Plug 'davidhalter/jedi-vim'
-" Plug 'python-mode/python-mode', { 'branch': 'develop', 'do': 'git submodule update --init --recursive' }
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'tpope/vim-commentary'
@@ -88,17 +82,6 @@ set noswapfile
 " Show line numbers
 let NERDTreeShowLineNumbers=1
 
-" Enable deoplete at startup
-let g:deoplete#enable_at_startup = 1
-
-" Python autocomplete settings
-let g:deoplete#sources#jedi#show_docstring = 1
-
-" Tern autocomplete settings
-let g:deoplete#sources#ternjs#docs = 1
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#case_insensitive = 1
-
 color candyman
 
 " Makes it easier to resize windows to just the right size.
@@ -124,16 +107,13 @@ autocmd BufRead,BufNewFile *.twig setlocal filetype=html.javascript
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 
-" Make gutentags ignore .gitignored files
-let g:gutentags_file_list_command = {
- \ 'markers': {
-     \ '.git': 'git ls-files',
-     \ '.hg': 'hg files',
-     \ },
-\ }
-
-
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
 let g:LanguageClient_autoStart = 1
+" Don't forget that a jsconfig.json or a tsconfig.json is needed
+" for javascript-typescript-stdio to work
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['pyls'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ }
