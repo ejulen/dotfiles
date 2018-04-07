@@ -42,8 +42,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
 Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'shawncplus/phpcomplete.vim'
 " Linting for various languages
 call plug#end()
 
