@@ -27,9 +27,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'tpope/vim-commentary'
-" SetColors all, then F8 to toggle through available color schemes
-Plug 'felixhummel/setcolors.vim'
-Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'
 " cs'" = ' to "
 " ysiw] = surround with [] (no spaces)
@@ -42,6 +39,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
 Plug 'leafgarland/typescript-vim'
+Plug 'nightsense/office'
 " Linting for various languages
 call plug#end()
 
@@ -86,7 +84,9 @@ set noswapfile
 " Show line numbers
 let NERDTreeShowLineNumbers=1
 
-color candyman
+set termguicolors
+set background=light
+colorscheme office-light
 
 " Makes it easier to resize windows to just the right size.
 if has('mouse')
