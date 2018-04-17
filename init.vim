@@ -4,14 +4,15 @@
 " - javascript-typescript-langserver (npm i -g
 "   javascript-typescript-langserver)
 " - Node
+" - Ag, the Silver Searcher
 set nocompatible
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Ag <whatever> to search with Ag
 Plug 'junegunn/fzf.vim'
 " <leader><leader>f{char} to start search
 Plug 'easymotion/vim-easymotion'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'pangloss/vim-javascript'
@@ -63,13 +64,6 @@ set copyindent
 set ignorecase
 set incsearch
 set hlsearch
-
-" Faster fuzzy searching, please
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" Grep with Ggr, navigate quickfix window with :cc <number> or :cn or :cp
-command! -nargs=+ Ggr execute 'silent Ggrep!' <q-args> | cw | redraw!
-autocmd FileType qf setlocal norelativenumber
 
 syntax on
 
@@ -125,3 +119,7 @@ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
+
+" Ctrl+X = horizontal split, Ctrl+V = vertical split
+nnoremap <silent> <c-p> :Files<CR>
+nnoremap <silent> <a-p> :GFiles<CR>
