@@ -121,5 +121,5 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
 
 " Ctrl+X = horizontal split, Ctrl+V = vertical split
-nnoremap <silent> <c-p> :Files<CR>
-nnoremap <silent> <a-p> :GFiles<CR>
+nnoremap <silent> <c-p> :GFiles<CR>
+nnoremap <silent> <a-p> :Files<CR>
