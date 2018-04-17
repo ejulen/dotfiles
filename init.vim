@@ -40,6 +40,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
 Plug 'leafgarland/typescript-vim'
 Plug 'nightsense/office'
+Plug 'Yggdroot/indentLine'
 " Linting for various languages
 call plug#end()
 
