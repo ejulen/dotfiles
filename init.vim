@@ -123,3 +123,5 @@ nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
 " Ctrl+X = horizontal split, Ctrl+V = vertical split
 nnoremap <silent> <c-p> :GFiles<CR>
 nnoremap <silent> <a-p> :Files<CR>
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
