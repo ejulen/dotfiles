@@ -80,9 +80,9 @@ set noswapfile
 " Show line numbers
 let NERDTreeShowLineNumbers=1
 
+colorscheme office-light
 set termguicolors
 set background=light
-colorscheme office-light
 
 " Makes it easier to resize windows to just the right size.
 if has('mouse')
