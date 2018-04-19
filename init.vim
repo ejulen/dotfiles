@@ -41,7 +41,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jwalton512/vim-blade'
 Plug 'leafgarland/typescript-vim'
 Plug 'nightsense/office'
-Plug 'Yggdroot/indentLine'
+" <Leader>ig to toggle
+Plug 'nathanaelkane/vim-indent-guides'
 " Linting for various languages
 call plug#end()
 
@@ -97,6 +98,7 @@ map <C-n> :NERDTreeToggle<CR>
 " % = current file, %:h = current file's directory
 "
 set cursorline
+set cursorcolumn
 set splitbelow
 set splitright
 
