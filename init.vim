@@ -20,7 +20,7 @@ Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kchmck/vim-coffee-script'
-Plug 'roxma/nvim-completion-manager'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -125,3 +125,5 @@ nnoremap <silent> <c-p> :GFiles<CR>
 nnoremap <silent> <a-p> :Files<CR>
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+let g:deoplete#enable_at_startup = 1
