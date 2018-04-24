@@ -4,3 +4,6 @@
 
 # Vim swap files
 .*.s??
+
+# Screw you, Mac
+.DS_Store
