@@ -6,4 +6,4 @@
 .*.s??
 
 # Screw you, Mac
-.DS_Store
+**/.DS_Store
