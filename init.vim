@@ -21,6 +21,7 @@ Plug 'styled-components/vim-styled-components'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -113,7 +114,6 @@ let g:LanguageClient_autoStart = 1
 " for javascript-typescript-stdio to work
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ }
 
