@@ -123,16 +123,15 @@ nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <silent> gs :call LanguageClient_textDocument_documentSymbol()<CR>
 
 " Ctrl+X = horizontal split, Ctrl+V = vertical split
-nnoremap <silent> <c-p> :GFiles<CR>
-nnoremap <silent> <a-p> :Files<CR>
+nnoremap <silent> <c-p> :Files<CR>
 
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --no-heading --files --hidden'
 
 let g:deoplete#enable_at_startup = 1
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always -S '.shellescape(<q-args>), 1,
+  \   'rg --column --line-number --no-heading --color=always -S --hidden '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
