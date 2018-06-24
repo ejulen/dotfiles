@@ -44,7 +44,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'nightsense/office'
 " <Leader>ig to toggle
 Plug 'nathanaelkane/vim-indent-guides'
-" Linting for various languages
+Plug 'digitaltoad/vim-pug'
+Plug 'cespare/vim-toml'
+Plug 'othree/html5.vim'
 call plug#end()
 
 filetype plugin indent on
