@@ -1,0 +1,24 @@
+%sh{kak-lsp --kakoune -s $kak_session}
+lsp-start
+lsp-auto-hover-enable
+set-face global DiagnosticError white,red
+set-face global DiagnosticWarning black,yellow
+
+add-highlighter global number_lines -relative -hlcursor
+add-highlighter global show_matching
+set-face global MatchingChar white,blue
+
+define-command fuzzy-find -params 1 -shell-candidates %{ rg --files } -docstring 'fuzzy finder' -hidden %{ edit %arg{1} }
+map global user p :fuzzy-find<space> -docstring 'fuzzy finder'
+
+define-command find -params 1 -docstring 'find' -hidden %{
+    %sh{
+    output=$(mktemp -t kak-find-fifo-XXXXX)
+    mkfifo ${output}
+    ( rg --column --no-heading --line-number -S $1 > ${output} ) > /dev/null 2>&1 < /dev/null &
+    echo "edit! -fifo ${output} *find*
+          set-option buffer filetype grep
+          hook buffer BufClose .* %{ nop %sh{ rm ${output} } }"
+    }
+}
+map global user P :find<space> -docstring 'find'
