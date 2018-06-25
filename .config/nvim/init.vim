@@ -26,7 +26,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -47,6 +46,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'digitaltoad/vim-pug'
 Plug 'cespare/vim-toml'
 Plug 'othree/html5.vim'
+Plug 'groenewege/vim-less'
+Plug 'ap/vim-css-color'
+" Linting for various languages
 call plug#end()
 
 filetype plugin indent on
@@ -117,6 +119,7 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
     \ 'typescript': ['javascript-typescript-stdio'],
+    \ 'php': ['php', '~/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php'],
     \ }
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
