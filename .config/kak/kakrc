@@ -8,10 +8,10 @@ add-highlighter global number_lines -relative -hlcursor
 add-highlighter global show_matching
 set-face global MatchingChar white,blue
 
-define-command fuzzy-find -params 1 -shell-candidates %{ rg --files } -docstring 'fuzzy finder' -hidden %{ edit %arg{1} }
+define-command fuzzy-find -params 1 -shell-candidates %{ rg --files } -docstring 'Fuzzy find a file with Ripgrep.' -hidden %{ edit %arg{1} }
 map global user p :fuzzy-find<space> -docstring 'fuzzy finder'
 
-define-command find -params 1 -docstring 'find' -hidden %{
+define-command search -params 1 -docstring 'Search in files with Ripgrep.' -hidden %{
     %sh{
     output=$(mktemp -t kak-find-fifo-XXXXX)
     mkfifo ${output}
@@ -21,4 +21,4 @@ define-command find -params 1 -docstring 'find' -hidden %{
           hook buffer BufClose .* %{ nop %sh{ rm ${output} } }"
     }
 }
-map global user f :find<space> -docstring 'find'
+map global user s :search<space> -docstring 'search'
