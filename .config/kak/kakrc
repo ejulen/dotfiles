@@ -13,12 +13,12 @@ map global user p :fuzzy-find<space> -docstring 'fuzzy finder'
 
 define-command search -params 1 -docstring 'Search in files with Ripgrep.' -hidden %{
     %sh{
-    output=$(mktemp -t kak-find-fifo-XXXXX)
+    output=$(mktemp -d -t kak-search)/fifo
     mkfifo ${output}
-    ( rg --column --no-heading --line-number -S $1 > ${output} ) > /dev/null 2>&1 < /dev/null &
+    ( rg --column --no-heading --line-number -S --hidden $1 > ${output} ) > /dev/null 2>&1 < /dev/null &
     echo "edit! -fifo ${output} *find*
           set-option buffer filetype grep
-          hook buffer BufClose .* %{ nop %sh{ rm ${output} } }"
+          hook buffer BufClose .* %{ nop %sh{ rm -r $(dirname ${output}) } }"
     }
 }
 map global user s :search<space> -docstring 'search'
