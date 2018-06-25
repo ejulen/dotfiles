@@ -22,3 +22,8 @@ define-command search -params 1 -docstring 'Search in files with Ripgrep.' -hidd
     }
 }
 map global user s :search<space> -docstring 'search'
+
+map -docstring 'case insensitive search' global user '/' /(?i)
+map -docstring 'case insensitive backward search' global user '<a-/>' <a-/>(?i)
+map -docstring 'case insensitive extend search' global user '?' ?(?i)
+map -docstring 'case insensitive backward extend-search' global user '<a-?>' <a-?>(?i)
