@@ -11,17 +11,7 @@ set-face global MatchingChar white,blue
 define-command fuzzy-find -params 1 -shell-candidates %{ rg --files } -docstring 'Fuzzy find a file with Ripgrep.' -hidden %{ edit %arg{1} }
 map global user p :fuzzy-find<space> -docstring 'fuzzy finder'
 
-define-command search -params 1 -docstring 'Search in files with Ripgrep.' -hidden %{
-    %sh{
-    output=$(mktemp -d -t kak-search)/fifo
-    mkfifo ${output}
-    ( rg --column --no-heading --line-number -S --hidden $1 > ${output} ) > /dev/null 2>&1 < /dev/null &
-    echo "edit! -fifo ${output} *find*
-          set-option buffer filetype grep
-          hook buffer BufClose .* %{ nop %sh{ rm -r $(dirname ${output}) } }"
-    }
-}
-map global user s :search<space> -docstring 'search'
+set-option global grepcmd 'rg --column --no-heading --line-number --smart-case --hidden'
 
 map -docstring 'case insensitive search' global user '/' /(?i)
 map -docstring 'case insensitive backward search' global user '<a-/>' <a-/>(?i)
