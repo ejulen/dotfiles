@@ -7,3 +7,11 @@
 
 # Screw you, Mac
 **/.DS_Store
+
+# Python stuff
+.mypy_cache
+.ropeproject
+__pycache__
+
+# Visual Studio Code
+.vscode
