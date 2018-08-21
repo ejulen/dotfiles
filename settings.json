@@ -17,5 +17,6 @@
     "editor.rulers": [80],
     "vim.sneak": true,
     "python.venvPath": "~/.virtualenvs",
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "files.insertFinalNewline": true
 }
