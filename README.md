@@ -10,3 +10,10 @@ These are my personal dotfiles. Feel free to use them.
     ln -s ~/.dotfiles/vimrc ~/.vimrc
     ```
 3. You are now using my terrible customizations. Is this what you wanted?
+
+## VS Code settings
+
+Symlink or copy to:
+- Windows: `%APPDATA%\Code\User\settings.json`
+- MacOS: `$HOME/Library/Application Support/Code/User/settings.json`
+- Linux: `$HOME/.config/Code/User/settings.json`
