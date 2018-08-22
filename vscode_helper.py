@@ -15,6 +15,7 @@ def unfreeze(args):
 
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser()
+    parser.set_defaults(func=lambda _args: parser.print_help())
     subparsers = parser.add_subparsers(title='subcommands')
 
     freeze_parser = subparsers.add_parser('freeze', help='freezes installed'
