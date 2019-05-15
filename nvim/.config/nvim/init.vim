@@ -36,6 +36,13 @@ set cindent
 set ignorecase
 set smartcase
 
+" Automatically highlight the active line in the active window
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
 " Made redundant by lightline
 set noshowmode
 
