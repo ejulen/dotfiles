@@ -13,5 +13,8 @@
             ]
         }
     },
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    // Linting won't work without this:
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black"
 }
