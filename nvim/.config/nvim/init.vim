@@ -36,6 +36,8 @@ set cindent
 set ignorecase
 set smartcase
 
+set inccommand=nosplit
+
 " Automatically highlight the active line in the active window
 augroup CursorLine
   au!
