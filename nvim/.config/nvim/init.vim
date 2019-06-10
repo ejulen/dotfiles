@@ -12,6 +12,9 @@ call plug#end()
 
 let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls' ]
 
+" cd into directory of opened file
+cd %:p:h
+
 set number
 set relativenumber
 
