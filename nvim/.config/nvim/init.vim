@@ -44,9 +44,6 @@ set smartcase
 
 set inccommand=nosplit
 
-set list
-set listchars=tab:!·,trail:·
-
 " Automatically highlight the active line in the active window
 augroup CursorLine
   au!
