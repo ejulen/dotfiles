@@ -8,6 +8,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-sleuth'
 call plug#end()
 
 let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls' ]
@@ -29,17 +30,22 @@ let g:sneak#label = 1
 
 nnoremap <silent> <C-p> :Files<cr>
 
-set tabstop=8
-set expandtab
-set shiftwidth=4
+set visualbell
+
 set autoindent
+set shiftwidth=4
 set smartindent
-set cindent
+set smarttab
+set softtabstop=4
+set expandtab
 
 set ignorecase
 set smartcase
 
 set inccommand=nosplit
+
+set list
+set listchars=tab:!·,trail:·
 
 " Automatically highlight the active line in the active window
 augroup CursorLine
