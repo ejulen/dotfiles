@@ -6,9 +6,15 @@ Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+" For Git.
 Plug 'tpope/vim-fugitive'
+" For GitHub.
 Plug 'tpope/vim-rhubarb'
+" For dynamically setting indentation settings depending on file content.
 Plug 'tpope/vim-sleuth'
+Plug 'kana/vim-textobj-user'
+" For (y|c|d)(a|i)q etc. Depends on vim-textobj-user.
+Plug 'beloglazov/vim-textobj-quotes'
 call plug#end()
 
 let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls' ]
