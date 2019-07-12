@@ -15,6 +15,10 @@ Plug 'tpope/vim-sleuth'
 Plug 'kana/vim-textobj-user'
 " For (y|c|d)(a|i)q etc. Depends on vim-textobj-user.
 Plug 'beloglazov/vim-textobj-quotes'
+" Shift arguments with <, and >,
+" Move between argument boundaries with [, and ],
+" New text objects a, and i,
+Plug 'PeterRincker/vim-argumentative'
 call plug#end()
 
 let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls' ]
@@ -59,6 +63,9 @@ augroup END
 
 " Made redundant by lightline
 set noshowmode
+
+" Use dif to remove a function call
+nnoremap dif %x``diwx
 
 " The following is shamelessly taken from the example coc configuration on
 " GitHub
