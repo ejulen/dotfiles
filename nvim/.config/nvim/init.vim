@@ -21,7 +21,7 @@ Plug 'beloglazov/vim-textobj-quotes'
 Plug 'PeterRincker/vim-argumentative'
 call plug#end()
 
-let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls' ]
+let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph' ]
 
 " cd into directory of opened file
 cd %:p:h
