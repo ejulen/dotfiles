@@ -20,9 +20,12 @@ Plug 'beloglazov/vim-textobj-quotes'
 " New text objects a, and i,
 Plug 'PeterRincker/vim-argumentative'
 Plug 'posva/vim-vue'
+Plug 'bkad/CamelCaseMotion'
 call plug#end()
 
 let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph', 'coc-vetur' ]
+
+let g:camelcasemotion_key = '<leader>'
 
 " cd into directory of opened file
 cd %:p:h
