@@ -23,7 +23,9 @@ Plug 'posva/vim-vue'
 Plug 'bkad/CamelCaseMotion'
 call plug#end()
 
-let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph', 'coc-vetur' ]
+let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph', 'coc-vetur', 'coc-prettier' ]
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 let g:camelcasemotion_key = '<leader>'
 
