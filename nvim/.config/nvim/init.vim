@@ -27,6 +27,9 @@ let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-js
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" Easier way of getting out of terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 let g:camelcasemotion_key = '<leader>'
 
 " cd into directory of opened file
