@@ -30,6 +30,12 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Easier way of getting out of terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+" Easier way of navigating windows
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 let g:camelcasemotion_key = '<leader>'
 
 " cd into directory of opened file
