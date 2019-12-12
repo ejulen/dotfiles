@@ -45,8 +45,7 @@ set number
 set relativenumber
 
 set termguicolors
-set background=light
-colorscheme solarized8
+colorscheme nord
 
 set splitright
 set splitbelow
@@ -181,7 +180,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ],
