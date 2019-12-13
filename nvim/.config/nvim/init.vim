@@ -45,7 +45,7 @@ set number
 set relativenumber
 
 set termguicolors
-colorscheme nord
+colorscheme gruvbox
 
 set splitright
 set splitbelow
@@ -180,7 +180,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ],
