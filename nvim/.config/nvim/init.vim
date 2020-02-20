@@ -25,7 +25,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'dag/vim-fish'
 call plug#end()
 
-let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph', 'coc-vetur', 'coc-prettier' ]
+let g:coc_global_extensions = [ 'coc-css', 'coc-python', 'coc-tsserver', 'coc-json', 'coc-phpls', 'coc-solargraph', 'coc-vetur', 'coc-prettier', 'coc-go' ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
