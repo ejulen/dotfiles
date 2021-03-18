@@ -1,6 +1,0 @@
-{
-    // Linting won't work without this:
-    "python.linting.pylintEnabled": true,
-    "python.formatting.provider": "black",
-    "diagnostic.virtualText": true
-}
